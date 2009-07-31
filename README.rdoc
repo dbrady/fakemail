@@ -1,0 +1,26 @@
+= FakeMail
+
+FakeMail is a helper for faking email sending from ruby. It works at a
+global level, without modifying code or writing extensive tests.
+
+FakeMail is loosely based on the same concept as chrisk' wonderful
+FakeWeb gem. You register an email server and the responses it would
+give to attempts to send mail (sent ok, relay denied, etc) and then
+when you send mail to those servers, you get those replies. If you
+send to unregistered servers, mail is delivered normally.
+
+Mail is obviously not like the web; instead of getting back a web page
+you get back a response object. But after a fakemail has been sent,
+FakeMail will let you review the sent messages (useful for verifying
+recipients, templating, etc).
+
+= Installation
+
+  sudo gem install dbrady-fakemail
+
+= Examples
+
+FakeMail is VERY fluid right now. Once the usage is less like soup and
+more like jello we'll start posting these.
+
+
